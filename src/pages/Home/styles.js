@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -59,14 +59,26 @@ main > h4 {
   margin: 0 0 2.4rem 2.4rem;
 }
 
-@media (min-width: 768px) {
-  
-  main .starterDishes {
-    display: flex;
-    justify-content: space-between;
+.starterDishes {
+    display: grid;  // Usando grid para layout responsivo
     gap: 1rem;
     margin: 2rem;
+    grid-template-columns: repeat(4, 1fr); // 5 colunas em telas grandes
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
+      grid-template-columns: repeat(3, 1fr); // 3 colunas em telas médias
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      grid-template-columns: repeat(2, 1fr); // 3 colunas em telas médias
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+      grid-template-columns: repeat(1, 1fr); // 2 colunas em telas pequenas
+    }
   }
+
+@media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
     .macaron {
       width: auto; 
       margin: 16rem 6rem 3rem;

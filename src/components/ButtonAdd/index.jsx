@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container } from './styles';
 import { FiMinus, FiPlus } from 'react-icons/fi';
 
-export function ButtonAdd({ initialValue = 0, ...rest }) {
-  const [count, setCount] = useState(initialValue);
-
+export function ButtonAdd({ quantity, setQuantity, ...rest }) {
   const decrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
+    if (quantity > 1) { // Impede que a quantidade fique abaixo de 1
+      setQuantity(quantity - 1);
     }
   };
 
   const increment = () => {
-    setCount(count + 1);
+    setQuantity(quantity + 1);
   };
 
   return (
     <Container type="button" {...rest}>
       <button onClick={decrement}><FiMinus /></button>
-      <span style={{ margin: '0 10px' }}>{count}</span>
+      <span style={{ margin: '0 10px' }}>{quantity}</span>
       <button onClick={increment}><FiPlus /></button>
     </Container>
   );
