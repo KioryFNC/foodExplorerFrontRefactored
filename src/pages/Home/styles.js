@@ -7,10 +7,11 @@ export const Container = styled.div`
   flex-direction: column;
 
 
+  background-color: ${({ theme }) => theme.COLORS.BODY_BG};
   main {
-    background-color: ${({ theme }) => theme.COLORS.BODY_BG};
     color: ${({ theme }) => theme.COLORS.WHITE_TEXT};
     font-family: 'poppins', sans-serif;
+    margin: 0 2rem;
   }
 
   
@@ -59,7 +60,7 @@ main > h4 {
   margin: 0 0 2.4rem 2.4rem;
 }
 
-.starterDishes {
+.starterDishes, .dessert, .drinks {
     display: grid;  // Usando grid para layout responsivo
     gap: 1rem;
     margin: 2rem;
