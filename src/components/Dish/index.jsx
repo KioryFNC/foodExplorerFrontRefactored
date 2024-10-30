@@ -21,10 +21,10 @@ export function Dish({ imageSrc, title, price, description }) {
         />
         <img src={imageSrc} alt={title} />
         <h3>{title}</h3>
-        <p className="price">R${(price * quantity).toFixed(2)}</p> {/* Preço total baseado na quantidade */}
+        <p className="price">R${(price * quantity).toFixed(2)}</p> 
         <p className="description">{description}</p>
-        <ButtonAdd quantity={quantity} setQuantity={setQuantity} /> {/* Passando a prop setQuantity */}
         <div className='buttons'>
+          <ButtonAdd quantity={quantity} setQuantity={setQuantity} />
           <ButtonMain title="incluir" />
         </div>
       </div>

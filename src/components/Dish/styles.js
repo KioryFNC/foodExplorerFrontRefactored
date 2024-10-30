@@ -16,7 +16,6 @@ export const Container = styled.div`
     align-items: center;
     gap: 1.2rem;
     border-radius: .8rem;
-    margin-left: 2.4rem;
   }
 
   img {
@@ -46,6 +45,7 @@ export const Container = styled.div`
 
   .card p.price{
     color: ${({ theme }) => theme.COLORS.CAKE_200};
+    font-size: 2rem;
   }
 
   .card p.description{

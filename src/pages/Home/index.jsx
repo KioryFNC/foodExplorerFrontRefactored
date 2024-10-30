@@ -7,11 +7,10 @@ import { useState } from "react";
 
 import Salada from '../../assets/salada.png'
 import Shrimp from '../../assets/shrimp.png'
-
+import Parma from '../../assets/parma.png'
 
 export function Home() {
-  const [saladQuantity, setSaladQuantity] = useState(0)
-  const [shrimpQuantity, setShrimpQuantity] = useState(0)
+  const [dishQuantity, setDishQuantity] = useState(0)
 
   return (
     <Container>
@@ -33,20 +32,24 @@ export function Home() {
             title="Salada Ravanello" 
             price={49.97} 
             description={"Rabanetes, folhas verdes e molho agridoce salpicados com gergelim"}
-            quantity={saladQuantity}
-            setQuantity={setSaladQuantity}
+            quantity={dishQuantity}
+            setQuantity={setDishQuantity}
           />
           <Dish 
             imageSrc={Shrimp} 
             title="Camarão" 
-            price="49,97"
-
+            price={79.97}
+            description={"Massa fresca com camarões e pesto"}
+            quantity={dishQuantity}
+            setQuantity={setDishQuantity}
           />
           <Dish 
-            imageSrc={Salada} 
-            title="Salada Ravanello" 
-            price="49,97"
-            
+            imageSrc={Parma} 
+            title="Torradas de Parma" 
+            price="25.97"
+            description={"Presunto de parma e rúcula em um pao com fermentação natural"}
+            quantity={dishQuantity}
+            setQuantity={setDishQuantity}
           />
         </div>
 
