@@ -8,6 +8,7 @@ import { useState } from "react";
 import Salada from '../../assets/salada.png'
 import Shrimp from '../../assets/shrimp.png'
 import Parma from '../../assets/parma.png'
+import molla from '../../assets/molla.png'
 import pinkMacarron from '../../assets/pinkMacaron.png'
 import peachyPastrie from '../../assets/peachyPastrie.png'
 import prugnaPie from '../../assets/prugnaPie.png'
@@ -58,10 +59,10 @@ export function Home() {
             setQuantity={setDishQuantity}
           />
           <Dish 
-            imageSrc={Salada} 
-            title="Salada Ravanello" 
-            price={49.97} 
-            description={"Rabanetes, folhas verdes e molho agridoce salpicados com gergelim"}
+            imageSrc={molla} 
+            title="Salada Molla" 
+            price={44.97} 
+            description={"Tomates cereja, folhas verdes, pepino e molho rose"}
             quantity={dishQuantity}
             setQuantity={setDishQuantity}
           />
@@ -70,14 +71,6 @@ export function Home() {
             title="Camarão" 
             price={79.97}
             description={"Massa fresca com camarões e pesto"}
-            quantity={dishQuantity}
-            setQuantity={setDishQuantity}
-          />
-          <Dish 
-            imageSrc={Parma} 
-            title="Torradas de Parma" 
-            price={25.97}
-            description={"Presunto de parma e rúcula em um pao com fermentação natural"}
             quantity={dishQuantity}
             setQuantity={setDishQuantity}
           />

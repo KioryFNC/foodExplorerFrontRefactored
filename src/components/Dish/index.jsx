@@ -6,7 +6,7 @@ import { ButtonAdd } from '../ButtonAdd';
 
 export function Dish({ imageSrc, title, price, description }) {
   const [isFavorited, setIsFavorited] = useState(false);
-  const [quantity, setQuantity] = useState(1); // Inicializando quantity como 1
+  const [quantity, setQuantity] = useState(1);
 
   const handleFavoriteClick = () => {
     setIsFavorited((prevState) => !prevState);
